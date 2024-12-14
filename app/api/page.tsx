@@ -32,7 +32,7 @@ export default function ApiPage() {
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold mb-8">API Documentation</h1>
       
-      <Alert variant="warning" className="mb-8">
+      <Alert variant="default" className="mb-8">
         <AlertTriangle className="h-4 w-4" />
         <AlertTitle>Under Development</AlertTitle>
         <AlertDescription>
