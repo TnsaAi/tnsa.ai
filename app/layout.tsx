@@ -18,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="stylesheet" href="./globals.css" />
+      </head>
       <body className={`${inter.className} bg-black text-white min-h-screen flex flex-col`}>
         <Navigation />
         <main className="flex-grow">
