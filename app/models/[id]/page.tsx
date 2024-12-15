@@ -100,6 +100,12 @@ const models = {
   },
 }
 
+export function generateStaticParams() {
+  return Object.keys(models).map((id) => ({
+    id: id,
+  }))
+}
+
 export default function ModelPage({ params }: { params: { id: string } }) {
   const model = models[params.id as keyof typeof models]
 
@@ -112,19 +118,12 @@ export default function ModelPage({ params }: { params: { id: string } }) {
       <h1 className="text-4xl font-bold mb-4">{model.name}</h1>
       <p className="text-xl mb-8">{model.description}</p>
 
-      <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
+      <h2 className="text-2xl font-semibold mb-4">Key Capabilities</h2>
       <ul className="list-disc list-inside mb-8">
         {model.capabilities.map((capability, index) => (
           <li key={index} className="mb-2">{capability}</li>
         ))}
       </ul>
-
-      <h2 className="text-2xl font-semibold mb-4">Additional Information</h2>
-      <p className="mb-8">
-        {model.name === 'NGen-1' && "Leveraging advanced deep learning and language modeling techniques, NGen-1 is capable of understanding the core elements of a seed and expanding them with coherence and precision. It has applications in creative writing, complex problem-solving, and content generation, providing a strong base for more advanced models in the NGen series."}
-        {model.name === 'NGen-3' && "With its adaptive attention mechanism, NGen-3 focuses on the most relevant information, delivering smarter and faster responses. From analyzing large datasets to managing real-time interactions, this model ensures that every detail is addressed, enhancing decision-making and task execution. NGen-3 is designed for powerful multitasking, handling multiple, high-demand processes effortlessly."}
-        {model.name === 'AGent' && "This model laid the foundation for TNSA's predictive AI technologies, showing exceptional versatility in adapting to dynamic environments and market fluctuations. Its success in the financial domain proved its capability for broader applications, beyond just price forecasting, as it learned to anticipate complex, evolving scenarios. Following its success, AGent was integrated into Neura, TNSA's AGI architecture, enhancing its cognitive reasoning and decision-making capabilities."}
-      </p>
 
       <h2 className="text-2xl font-semibold mb-4">Technical Specifications</h2>
       <dl className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
