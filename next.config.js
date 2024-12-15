@@ -1,4 +1,3 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -6,9 +5,7 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  assetPrefix: './',
-  basePath: '',
+  assetPrefix: '/',
 }
 
 module.exports = nextConfig
-
