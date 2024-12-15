@@ -134,6 +134,12 @@ const researchPapers = {
   }
 }
 
+export function generateStaticParams() {
+  return Object.keys(researchPapers).map((id) => ({
+    id: id,
+  }))
+}
+
 export default function ResearchPaperPage({ params }: { params: { id: string } }) {
   const paper = researchPapers[params.id as keyof typeof researchPapers]
 
