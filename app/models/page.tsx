@@ -39,7 +39,7 @@ const models = [
     framework: 'ARCH-X 8',
   },
   {
-    id: 'StellarTTSv2-Stellarnium13-engine.90k',
+    id: 'audio-transcribe-2',
     name: 'StellarTTS v2',
     description: 'Advanced audio transcription and analysis.',
     capabilities: ['Multi-language transcription', 'Speaker identification', 'Sentiment analysis'],
