@@ -68,6 +68,12 @@ const products = {
   },
 }
 
+export function generateStaticParams() {
+  return Object.keys(products).map((id) => ({
+    id: id,
+  }))
+}
+
 export default function ProductPage({ params }: { params: { id: string } }) {
   const product = products[params.id as keyof typeof products]
 
