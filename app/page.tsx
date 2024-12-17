@@ -1,3 +1,5 @@
+// tnsaai.com/protcols/home?=apis.tnsaai.com=:653698dfrfs
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Search } from 'lucide-react'
